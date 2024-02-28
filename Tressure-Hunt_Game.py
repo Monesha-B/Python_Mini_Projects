@@ -1,5 +1,6 @@
 # https://ascii.co.uk/art
-'''*******************************************************************************
+print('''
+*******************************************************************************
           |                   |                  |                     |
  _________|________________.=""_;=.______________|_____________________|_______
 |                   |  ,-"_,=""     `"=.|                  |
@@ -18,21 +19,27 @@ ____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
 /______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
 ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 /______/______/______/______/______/______/______/______/______/______/[TomekK]
-*******************************************************************************'''
+******************************************************************************* 
+''')
 print("Welcome to Treasure Island. Your mission is to find the treasure")
 
-first = input("You're at a cross rood now.\nWhere do you want to go? Type 'left' or 'right':  ")
+# NO MATTER WHAT CASE USER TYPES, IT TAKES THE INPUT AND CONVERT IT TO A LOWER CASE OR WE CAN USE THE ALL POSSIBLE OPTIONS USING OPERATOR
+first = input("You're at a cross rood now.\nWhere do you want to go? Type 'left' or 'right':  ").lower()
 
-if first == 'left':
+if first == 'left' or first == 'Left' :
     second = input("You came to a lake. There is an island in the middle of the lake.\nType 'wait' to wait for a boat. type 'swim' to swim across:  ")
-    if second == "wait":
+    if second == "wait" or second == "Wait":
         third = input("You arrived at the island unharmed. There is a house with 3 doors.\none red, one yellow and one blue. which color do you choose?\n")
-        if third == "red":
+        if third == "red" or third == "Red":
             print("you are Burned by fire. Game Over")
-        elif third == "blue":
+        elif third == "blue" or third == "Blue":
             print("you are Eaten by beasts. Game Over.")
-        elif third == "yellow":
-            print("You win!")    
+        elif third == "yellow" or third == "Yellow":
+            print("You win!") 
+        else:
+            print("you chose a door that doesn't exist. Game over")      
+    else:
+        print("you got attacked by an angry trout. Game over.")         
 else:    
     print("Fall into a hole. Game Over")
 
