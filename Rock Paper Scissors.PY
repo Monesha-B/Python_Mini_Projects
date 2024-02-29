@@ -7,7 +7,7 @@ II - Paper wins against rock.\n
 III - Scissors win against paper.\n      
 you get to play with computer and check your luck if you can beat
 """)
-
+global computer_select
 def rps():
     rock = '''
         _______
