@@ -1,5 +1,14 @@
 import random
-names = names_string.split(", ") # names_string is an import module created for  input()
+
+def names_string():
+
+    n = int(input("Enter the size of the list "))
+
+    num_list = list(str(num) for num in input("Enter the list items separated by space ").strip().split())[:n]
+
+    print("User list: ", num_list)
+
+names = names_string() # names_string is an import module created for  input()
 # The code above converts the input into an array seperating
 #each name in the input by a comma and space.
 
@@ -18,4 +27,11 @@ print(f"{random_name} is going to buy the meal today!")
 # random_choice = random.randint(0, num_items - 1)
 # # Choose and print a random name.
 # print(names[random_choice])
+# def names_string():
+
+#     n = int(input("Enter the size of the list "))
+
+#     num_list = list(int(num) for num in input("Enter the list items separated by space ").strip().split())[:n]
+
+#     print("User list: ", num_list)
 
